@@ -9,7 +9,8 @@ class MP3Importer
     f = Dir[@path + "/*.mp3"]
     new_array = []
     f.each do |file|
-      new_array << file[@path] = ""
+      file[@path] = ""
+      new_array << file
     end
     #Dir[@path + "/*.mp3"].select {|f| File.file? f}
     #Dir.entries("#{@path}" + "/*.mp3").select {|f| !File.directory? f}
