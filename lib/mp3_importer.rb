@@ -6,7 +6,7 @@ class MP3Importer
   end 
   
   def files
-    Dir[@path + "/*.mp3"].select {|f| !File.directory? f}
+    Dir[@path + "/*.mp3"].select {|f| !File.file? f}
     #Dir.entries("#{@path}" + "/*.mp3").select {|f| !File.directory? f}
     
   end 
