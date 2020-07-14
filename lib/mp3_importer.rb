@@ -7,12 +7,13 @@ class MP3Importer
   
   def files
     f = Dir[@path + "/*.mp3"]
+    new_array = []
     f.each do |file|
-      file[@path] = ""
+      new_array << file[@path] = ""
     end
-    Dir[@path + "/*.mp3"].select {|f| File.file? f}
+    #Dir[@path + "/*.mp3"].select {|f| File.file? f}
     #Dir.entries("#{@path}" + "/*.mp3").select {|f| !File.directory? f}
-    
+    new_array
   end 
   
   def import(list_of_filenames)
